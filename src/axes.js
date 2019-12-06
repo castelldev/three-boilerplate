@@ -1,4 +1,4 @@
-import { BufferGeometry, LineBasicMaterial, DoubleSide, Line, BufferAttribute, Group } from 'three'
+import { BufferAttribute, BufferGeometry, DoubleSide, Group, Line, LineBasicMaterial } from 'three'
 class axes {
     constructor(color = 0x000000, xLength = 2000, yLength = 2000, zLength = 2000) {
         const lines = [
@@ -11,8 +11,8 @@ class axes {
                 0, yLength, 0
             ]),
             new Float32Array([  /* z-axis */
-                0, 0, -Math.abs(yLength),
-                0, 0, yLength
+                0, 0, -Math.abs(zLength),
+                0, 0, zLength
             ])
         ]
 
